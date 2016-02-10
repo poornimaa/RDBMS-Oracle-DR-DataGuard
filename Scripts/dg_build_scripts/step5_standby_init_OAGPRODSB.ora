@@ -1,0 +1,58 @@
+*.java_pool_size=16777216
+*.large_pool_size=16777216
+OAGPRODSB1.__oracle_base='/u01/app/oracle'#ORACLE_BASE set from environment
+OAGPRODSB2.__oracle_base='/u01/app/oracle'#ORACLE_BASE set from environment
+*.pga_aggregate_target=26843545600
+*.sga_target=53687091200
+*.shared_pool_size=4294967296
+*.streams_pool_size=0
+*.archive_lag_target=0
+*.audit_file_dest='/u01/app/db/ebs/shared1/diag/OAGPRODSB/OAGPRODSB/adump'
+*.audit_trail='db'
+#*.cluster_database=true
+*.compatible='11.2.0.2.0'
+*.control_files='+DATA_ODEVX3/OAGPRODSB/controlfile/control01.ctl','+RECO_ODEVX3/OAGPRODSB/controlfile/control02.ctl'
+*.db_block_size=8192
+*.db_create_file_dest='+DATA_ODEVX3'
+*.db_domain=''
+#*.db_file_name_convert='OAGPROD','OAGPRODSB'
+#*.log_file_name_convert='OAGPROD','OAGPRODSB'
+#*.db_file_name_convert='+DATA_ODEVX2','+DATA_ODEVX3/'
+*.db_file_name_convert='+DATA_ODEVX2/OAGPROD','+DATA_ODEVX3//OAGPRODSB'
+*.log_file_name_convert='+RECO_ODEVX2/OAGPROD','+RECO_ODEVX3/OAGPRODSB'
+*.db_name='OAGPROD'
+*.db_recovery_file_dest='+RECO_ODEVX3'
+*.db_recovery_file_dest_size=10737418240
+*.db_unique_name='OAGPRODSB'
+#*.dg_broker_config_file1='+DATA_ODEVX3/OAGPROD/BROKER/dr1OAGPRODSB.dat'
+#*.dg_broker_config_file2='+DATA_ODEVX3/OAGPROD/BROKER/dr2OAGPRODSB.dat'
+#*.dg_broker_start=TRUE
+*.diagnostic_dest=' /u01/app/oracle'
+*.dispatchers='(PROTOCOL=TCP) (SERVICE=OAGPRODSBXDB)'
+*.fal_server='OAGPROD'
+*.fal_client='OAGPRODSB'
+#OAGPRODSB1.instance_number=1
+#OAGPRODSB2.instance_number=2
+*.java_pool_size=16777216
+*.large_pool_size=16777216
+*.log_archive_config='dg_config=(OAGPRODSB,OAGPROD)'
+*.log_archive_dest_1='location=+RECO_ODEVX3','valid_for=(ALL_LOGFILES, ALL_ROLES) DB_UNIQUE_NAME=OAGPRODSB'
+*.log_archive_format='%t_%s_%r.dbf'
+#OAGPRODSB2.log_archive_format='%t_%s_%r.arch'
+#OAGPRODSB1.log_archive_format='%t_%s_%r.arch'
+*.log_archive_max_processes=10
+*.log_archive_min_succeed_dest=1
+#OAGPRODSB2.log_archive_trace=0
+#OAGPRODSB1.log_archive_trace=0
+*.open_cursors=600
+*.processes=1000
+*.remote_listener='cluster-exa3:1521'
+*.local_listener='(DESCRIPTION = (ADDRESS=(PROTOCOL=TCP)(HOST=odevx3db01-vip)(PORT=1521)) (ADDRESS=(PROTOCOL=TCP)(HOST=10.10.127.12)(PORT=1521)) (CONNECT_DATA = (SERVER = DEDICATED) (SERVICE_NAME = OAGPRODSB) (UR=A)))'
+*.remote_login_passwordfile='exclusive'
+*.standby_file_management='AUTO'
+#OAGPRODSB1.thread=1
+#OAGPRODSB2.thread=2
+#OAGPRODSB1.undo_tablespace='UNDOTBS1'
+#OAGPRODSB2.undo_tablespace='UNDOTBS2'
+*.db_files=3000
+

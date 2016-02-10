@@ -1,0 +1,14 @@
+run {
+allocate channel prim1 type disk;
+allocate channel prim2 type disk;
+allocate channel prim3 type disk;
+allocate channel prim4 type disk;
+BACKUP DATABASE PLUS ARCHIVELOG;
+SQL "ALTER SYSTEM ARCHIVE LOG CURRENT";
+BACKUP CURRENT CONTROLFILE FOR STANDBY format '/localorabkp/odevx2db01/rman/OAGPROD/20140820/level_0/stby_control_file.ctl';
+release channel prim1;
+release channel prim2;
+release channel prim3;
+release channel prim4;
+}
+

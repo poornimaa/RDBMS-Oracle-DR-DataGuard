@@ -1,0 +1,13 @@
+run {
+allocate channel prim1 type disk;
+allocate channel prim2 type disk;
+allocate channel prim3 type disk;
+allocate channel prim4 type disk;
+allocate auxiliary channel stby1 type disk;
+duplicate target database for standby from active database;
+release channel prim1;
+release channel prim2;
+release channel prim3;
+release channel prim4;
+release channel stby1;
+}

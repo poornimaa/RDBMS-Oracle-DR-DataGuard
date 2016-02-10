@@ -1,0 +1,75 @@
+#Primary Site
+
+LISTENER_ODEVX2DB01 =
+  (DESCRIPTION_LIST =
+    (DESCRIPTION =
+(SEND_BUFF_SIZE=84375)	
+(RECV_BUFF_SIZE=84375)
+   (ADDRESS = (PROTOCOL = TCP)(HOST = odevx2db01-vip)(PORT = 1521))
+   (ADDRESS = (PROTOCOL = TCP)(HOST = odevx2db01)(PORT = 1521))
+    )
+  )
+
+SID_LIST_LISTENER_ODEVX2DB01 =
+  (SID_LIST =
+    (SID_DESC =
+        (SDU=32767)
+      (ORACLE_HOME= /u01/app/oracle/product/11.2.0.3/dbhome_1)
+        (GLOBAL_DBNAME= IGAPROD_DGMGRL)  	
+      (SID_NAME = IGAPROD)
+    )
+  (SID_LIST =
+    (SID_DESC =
+        (SDU=32767)
+      (ORACLE_HOME= /u01/app/oracle/product/11.2.0.3/dbhome_1)
+        (GLOBAL_DBNAME= DGEPROD_DGMGRL)         
+      (SID_NAME = DGEPROD)
+    )
+  (SID_LIST =
+    (SID_DESC =
+        (SDU=32767)
+      (ORACLE_HOME= /u01/app/oracle/product/11.2.0.3/dbhome_1)
+        (GLOBAL_DBNAME= OAGPROD_DGMGRL)         
+      (SID_NAME = OAGPROD)
+    )
+  )
+
+#Add more for other Databases
+
+#Standby Listener configuration
+
+LISTENER_ODEVX3DB01 =
+  (DESCRIPTION_LIST =
+    (DESCRIPTION =
+(SEND_BUFF_SIZE=84375)	
+(RECV_BUFF_SIZE=84375)
+   (ADDRESS = (PROTOCOL = TCP)(HOST = odevx3db01-vip)(PORT = 1521))
+   (ADDRESS = (PROTOCOL = TCP)(HOST = odevx3db01)(PORT = 1521))
+    )
+  )
+
+SID_LIST_LISTENER_ODEVX3DB01 =
+  (SID_LIST =
+    (SID_DESC =
+        (SDU=32767)
+      (ORACLE_HOME= /u01/app/oracle/product/11.2.0.3/dbhome_1)
+        (GLOBAL_DBNAME= IGAPRODSB_DGMGRL)  	
+      (SID_NAME = IGAPRODSB)
+    )
+  (SID_LIST =
+    (SID_DESC =
+        (SDU=32767)
+      (ORACLE_HOME= /u01/app/oracle/product/11.2.0.3/dbhome_1)
+        (GLOBAL_DBNAME= DGEPRODSB_DGMGRL)         
+      (SID_NAME = DGEPRODSB)
+    )
+  (SID_LIST =
+    (SID_DESC =
+        (SDU=32767)
+      (ORACLE_HOME= /u01/app/oracle/product/11.2.0.3/dbhome_1)
+        (GLOBAL_DBNAME= OAGPRODSB_DGMGRL)         
+      (SID_NAME = OAGPRODSB)
+    )
+  )
+
+#Add more for other Databases

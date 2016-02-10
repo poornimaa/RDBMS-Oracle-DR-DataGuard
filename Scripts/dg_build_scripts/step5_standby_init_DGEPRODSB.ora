@@ -1,0 +1,58 @@
+*.java_pool_size=16777216
+*.large_pool_size=16777216
+DGEPRODSB1.__oracle_base='/u01/app/oracle'#ORACLE_BASE set from environment
+DGEPRODSB2.__oracle_base='/u01/app/oracle'#ORACLE_BASE set from environment
+*.pga_aggregate_target=26843545600
+*.sga_target=53687091200
+*.shared_pool_size=4294967296
+*.streams_pool_size=0
+*.archive_lag_target=0
+*.audit_file_dest='/u01/app/db/ebs/shared1/diag/DGEPRODSB/DGEPRODSB/adump'
+*.audit_trail='db'
+#*.cluster_database=true
+*.compatible='11.2.0.2.0'
+*.control_files='+DATA_ODEVX3/DGEPRODSB/controlfile/control01.ctl','+RECO_ODEVX3/DGEPRODSB/controlfile/control02.ctl'
+*.db_block_size=8192
+*.db_create_file_dest='+DATA_ODEVX3'
+*.db_domain=''
+#*.db_file_name_convert='DGEPROD','DGEPRODSB'
+#*.log_file_name_convert='DGEPROD','DGEPRODSB'
+#*.db_file_name_convert='+DATA_ODEVX2','+DATA_ODEVX3/'
+*.db_file_name_convert='+DATA_ODEVX2/DGEPROD','+DATA_ODEVX3//DGEPRODSB'
+*.log_file_name_convert='+RECO_ODEVX2/DGEPROD','+RECO_ODEVX3/DGEPRODSB'
+*.db_name='DGEPROD'
+*.db_recovery_file_dest='+RECO_ODEVX3'
+*.db_recovery_file_dest_size=10737418240
+*.db_unique_name='DGEPRODSB'
+#*.dg_broker_config_file1='+DATA_ODEVX3/DGEPROD/BROKER/dr1DGEPRODSB.dat'
+#*.dg_broker_config_file2='+DATA_ODEVX3/DGEPROD/BROKER/dr2DGEPRODSB.dat'
+#*.dg_broker_start=TRUE
+*.diagnostic_dest=' /u01/app/oracle'
+*.dispatchers='(PROTOCOL=TCP) (SERVICE=DGEPRODSBXDB)'
+*.fal_server='DGEPROD'
+*.fal_client='DGEPRODSB'
+#DGEPRODSB1.instance_number=1
+#DGEPRODSB2.instance_number=2
+*.java_pool_size=16777216
+*.large_pool_size=16777216
+*.log_archive_config='dg_config=(DGEPRODSB,DGEPROD)'
+*.log_archive_dest_1='location=+RECO_ODEVX3','valid_for=(ALL_LOGFILES, ALL_ROLES) DB_UNIQUE_NAME=DGEPRODSB'
+*.log_archive_format='%t_%s_%r.dbf'
+#DGEPRODSB2.log_archive_format='%t_%s_%r.arch'
+#DGEPRODSB1.log_archive_format='%t_%s_%r.arch'
+*.log_archive_max_processes=10
+*.log_archive_min_succeed_dest=1
+#DGEPRODSB2.log_archive_trace=0
+#DGEPRODSB1.log_archive_trace=0
+*.open_cursors=600
+*.processes=1000
+*.remote_listener='cluster-exa3:1521'
+*.local_listener='(DESCRIPTION = (ADDRESS=(PROTOCOL=TCP)(HOST=odevx3db01-vip)(PORT=1521)) (ADDRESS=(PROTOCOL=TCP)(HOST=10.10.127.12)(PORT=1521)) (CONNECT_DATA = (SERVER = DEDICATED) (SERVICE_NAME = DGEPRODSB) (UR=A)))'
+*.remote_login_passwordfile='exclusive'
+*.standby_file_management='AUTO'
+#DGEPRODSB1.thread=1
+#DGEPRODSB2.thread=2
+#DGEPRODSB1.undo_tablespace='UNDOTBS1'
+#DGEPRODSB2.undo_tablespace='UNDOTBS2'
+*.db_files=3000
+
